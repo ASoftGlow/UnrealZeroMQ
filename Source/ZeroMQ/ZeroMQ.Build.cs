@@ -14,7 +14,7 @@ public class ZeroMQ : ModuleRules
 
     private string ZeroMQRootPath
     {
-        get { return Path.GetFullPath(Path.Combine(ThirdPartyPath, "libzmq_4.3.1")); }
+        get { return Path.GetFullPath(Path.Combine(ThirdPartyPath, "libzmq_4.3.6")); }
     }
 
     public void AddZeroMQ(ReadOnlyTargetRules Target)
@@ -28,7 +28,7 @@ public class ZeroMQ : ModuleRules
         string staticLibrary = "";
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            staticLibrary = Path.Combine(ZeroMQRootPath, "Windows", "x64", "libzmq-v141-mt-s-4_3_2.lib");
+            staticLibrary = Path.Combine(ZeroMQRootPath, "Windows", "x64", "libzmq-mt-s-4_3_6.lib");
         }
         else if (Target.Platform == UnrealTargetPlatform.Linux)
         {

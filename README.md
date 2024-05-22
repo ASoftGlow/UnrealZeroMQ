@@ -1,5 +1,5 @@
 # UnrealZeroMQ
-Unreal Engine 4 plugin for ZeroMQ with bindings from [zmqcpp](https://github.com/zeromq/cppzmq).
+Unreal Engine 5 plugin for ZeroMQ with bindings from [cppzmq](https://github.com/zeromq/cppzmq).
 
 ## Usage
 1. Copy this repository into the `Plugins` folder of your Unreal project.
@@ -19,7 +19,7 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 // place this somewhere it'll be run (e.g. BeginPlay() of your gamemode or similar)
 int major, minor, patch;
 zmq::version(&major, &minor, &patch);
-UE_LOG(LogTemp, Log, TEXT("ZeroMQ version: v%d.%d.%d), major, minor, patch);
+UE_LOG(LogTemp, Log, TEXT("ZeroMQ version: v%d.%d.%d"), major, minor, patch);
 ...
 
 ```
